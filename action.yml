@@ -156,6 +156,7 @@ runs:
       working-directory: android-kernel
       run: |
         repo status
+        sed -i '/"protected_exports_list": "android\/abi_gki_protected_exports_aarch64",/d' common/BUILD.bazel
         rm common/android/abi_gki_protected_exports_* || echo "No protected exports!"
         git config --global user.email "bot@github.actions.org"
         git config --global user.name "github.actions"

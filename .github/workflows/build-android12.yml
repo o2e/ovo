@@ -16,10 +16,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - version: r13
+          - version: 5.10.209
             tag: android12-5.10
             patch-level: 2024-05
             arch: aarch64
+            end: r13
   
     steps:
       - name: Maximize build space
@@ -41,7 +42,7 @@ jobs:
         with:
           arch: ${{ matrix.arch }}
           tag: ${{ matrix.tag }}-${{ matrix.patch-level }}
-          simple-tag: ${{ matrix.tag }}
+          simple-tag: ${{ matrix.tag }}_${{ matrix.end }}
           version: ${{ matrix.version }}
           fast_build: false
           module-name: ovo

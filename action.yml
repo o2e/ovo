@@ -43,7 +43,7 @@ runs:
     - name: Validate Input
       shell: bash
       run: |
-        VALID_TAGS=("android12-5.10" "android13-5.10" "android13-5.15" "android14-5.15" "android14-6.1" "android15-6.6" "android16-6.12")
+        VALID_TAGS=("android12-5.10_r13" "android13-5.10" "android13-5.15" "android14-5.15" "android14-6.1" "android15-6.6" "android16-6.12")
         if [[ ! " ${VALID_TAGS[@]} " =~ " ${{ inputs.simple-tag }} " ]]; then
           echo "Invalid tag specified: ${{ inputs.simple-tag }}. Must be one of: ${VALID_TAGS[@]}"
           exit 1

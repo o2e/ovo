@@ -156,7 +156,7 @@ runs:
       working-directory: android-kernel
       run: |
         repo status
-        if [[ "${{ inputs.simple-tag }}" != "android16-6.12" ]]; then
+        if [[ "${{ inputs.simple-tag }}" != "android12-5.10" ]]; then
           sed -i '/"protected_exports_list": "android\/abi_gki_protected_exports_aarch64",/d' common/BUILD.bazel
           rm common/android/abi_gki_protected_exports_* || echo "No protected exports!"
         fi

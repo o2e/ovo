@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - version: 5.10.209
+          - version: r13
             tag: android12-5.10
             patch-level: 2024-05
             arch: aarch64

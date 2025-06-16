@@ -1,4 +1,4 @@
-name: Android13 Kernel Module Build
+name: Android12 Kernel Module Build
 
 on:
   workflow_dispatch:
